@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Verifica</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='bootstrap.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Jost', sans-serif;
+        }
+
+        .tbGray td,.tbGray{
+            background-color: #D9D9D9 !important;  
+        }
+
+        .tbA{
+            background-color: #B9FFFF !important;
+            border-color: #B9FFFF !important;
+        }
+
+        .tbB td,.tbB{
+            background-color: #81C9FA !important;
+            border-color: #81C9FA !important;
+        } 
+
+        .tbC td,.tbC{
+            background-color: #2196F3 !important;
+            border-color: #2196F3 !important;
+        }
+
+        .tbD td,.tbD{
+            background-color: #1465BB !important;
+            border-color: #1465BB !important;
+        }
+
+        .tbE td,.tbE{
+            background-color: #0057AD !important;
+            border-color: #0057AD !important;
+        }
+
+        .tbF td,.tbF{
+            background-color: #0057AD !important;
+            border-color: #0057AD !important;
+        }
+
+
+
+        td {
+            vertical-align: bottom;
+            text-align: center;
+            text-align: center; 
+            position:relative !important;
+        }
+
+        .dayLabel {
+            font-size: 1.5em;
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);    
+        }
+
+        .botonVolver{ 
+            transform: rotate(180deg);   
+            position: absolute;
+            fill: gray;
+            right: 2%;
+            cursor: pointer;
+            transition:transform .5s ;
+        }
+        .botonVolver:hover{ 
+            transform: rotate(360deg);   
+            fill: black;
+            right: 2%;
+        }
+        
+        .diaA{
+            background-color: #FFFFA2 !important;
+        }
+
+        .diaB{
+            background-color: #E3EC72 !important;
+        }
+
+        .diaC{
+            background-color: #BFBF00 !important;
+        }
+
+
+        .btn-continue,.btn-continue:hover:active{
+            background-color: #198754 !important;
+            color:white !important;
+            border: none !important;
+        } 
+        
+        .btn-continue:hover{
+            background-color: #a4e6c7 !important;
+            color:rgb(6, 97, 9) !important;
+        }
+
+        .btn-abort,.btn-abort:hover:active{
+            background-color: #d14545 !important;
+            color:white !important;
+            border: none !important;
+        }
+  
+
+        .btn-abort:hover{
+            background-color: #fbafaf !important;
+            color:#4e0d0d !important;
+        }
+
+        .btnWeekR,.btnWeekL,.btnWeekL:hover:active,.btnWeekR:hover:active{
+            font-size: 2.5em;
+            background: none; 
+            border: none;
+            color: gray; 
+        }
+        .btnWeekR{  
+            right: 20%;
+            transition:right .3s;
+        } 
+
+        .btnWeekL{  
+            left: 20%;
+            transition:left .3s;
+        } 
+
+        .btnWeekR:hover{ 
+            color: black;
+            right: 15%;
+        } 
+
+        .btnWeekL:hover{ 
+            color: black;
+            left: 15%;
+        } 
+
+    </style>
+</head>
+<body>
+    <!--Header -->
+    <div class="row bg-secondary-subtle text-center my-0 py-0 fixed-top">
+        <p class="fs-2 my-2">Verifica tu Menú</p>
+    </div> 
+
+    <div class="container "> 
+        <!-- Content -->
+        <div class="row" style="min-height: 80vh; margin-top: 5%;">
+            <!-- Header -->
+            <div class="col-12 my-3 p-0">
+                <div class="row">
+                    <div class="col-4 d-flex align-items-end justify-content-end">
+                        <p class="my-0" style="font-style: italic; font-size: 1.4em;">Periodo: 23 Oct a 27 de Oct</p>
+                    </div>
+                    
+                    <div class="col-4 d-flex align-items-center justify-content-center mx-auto p-0 " style="position: relative;">
+                        <button class="btnWeekL" style="position:absolute">⮜</button>
+                        <p class="my-0" style="font-size: 2.4em;position: static; ">
+                            Semana 1
+                        </p>
+                        <button class="btnWeekR" style="position:absolute">⮞</button>
+                    </div>
+                    
+                    <div class="col-4 d-flex align-items-end justify-content-start">
+                        <p class="my-0" style="font-style: italic; font-size: 1.4em;">Calificación Promedio: 82</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Table -->
+            <div class="col-12 text-center justify-content-center d-flex">
+                <table class="table table-bordered" style="border-color: #A1A1A1;">
+                    <!--Headers-->
+                    <tr style="border-width: 0px;"> 
+                        <th colspan="1" style="width: 20px; border-width: 0px;">&nbsp</th>
+                        <th colspan="1" class="diaA" style="border-width: 0px;">Desayuno</th>
+                        <th colspan="1" class="diaB" style="border-width: 0px;">Comida</th>
+                        <th colspan="1" class="diaC" style="border-width: 0px;">Cena</th>
+                    </tr>
+
+                    <!-- Lunes -->
+                    <tr style="border-width: 0px;">
+                        <!--Date Tag-->
+                        <td rowspan="3" class="align-middle tbA dayLabel" style="border-color: #B9FFFF;">
+                            <span class="mx-auto" >Lunes</span>
+                        </th> 
+
+                        <!--Row Members-->
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 2
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </span>
+                        </td>
+                        <td class="tbGray align-middle"> 
+                            Fila 1, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 4
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <!--Row Members-->
+                        <td class="align-middle">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                        </td> 
+                    </tr>
+                    <tr class="tbGray" style="border-color: #B9FFFF;">
+                        <!--Row Members-->
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td> 
+                    </tr>
+
+                    <!-- Martes -->
+                    <tr style="border-width: 0px;">
+                        <!--Date Tag-->
+                        <td rowspan="3" class="align-middle tbB dayLabel" style="border-color: #81C9FA;">
+                            <span class="mx-auto" >Martes</span>
+                        </th> 
+
+                        <!--Row Members-->
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 2
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 3
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 4
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <!--Row Members-->
+                        <td class="align-middle">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td> 
+                    </tr>
+                    <tr class="tbGray" style="border-color: #81C9FA;">
+                        <!--Row Members-->
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td> 
+                    </tr>
+
+                    <!-- Miercoles -->
+                    <tr style="border-width: 0px;">
+                        <!--Date Tag-->
+                        <td rowspan="3" class="align-middle tbC dayLabel" style="border-color: #2196F3;">
+                            <span class="mx-auto" >Miercoles</span>
+                        </th> 
+
+                        <!--Row Members-->
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 2
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 3
+                            <span class="botonVolver">
+                            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                            </svg>
+                            </span>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 4
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <!--Row Members-->
+                        <td class="align-middle">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+                    <tr class="tbGray" style="border-color: #2196F3;">
+                        <!--Row Members-->
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+                    
+                    <!-- Juves -->
+                    <tr style="border-width: 0px;">
+                        <!--Date Tag-->
+                        <td rowspan="3" class="align-middle tbD dayLabel" style="border-color: #1465BB;">
+                            <span class="mx-auto">Jueves</span>
+                        </th> 
+
+                        <!--Row Members-->
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 4
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <!--Row Members-->
+                        <td class="align-middle">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+                    <tr class="tbGray" style="border-color: #1465BB;">
+                        <!--Row Members-->
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+
+                    <!-- Viernes -->
+                    <tr style="border-width: 0px;">
+                        <!--Date Tag-->
+                        <td rowspan="3" class="align-middle tbE dayLabel" style="border-color: #0057AD; color:rgb(223, 223, 223);">
+                            <span class="mx-auto tx">Viernes</span>
+                        </th> 
+
+                        <!--Row Members-->
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="tbGray align-middle">
+                            Fila 1, Celda 4
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+                    <tr>
+                        <!--Row Members-->
+                        <td class="align-middle">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+                    <tr class="tbGray" style="border-color: #0057AD; color:white;">
+                        <!--Row Members-->
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 1
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 2
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td>
+                        <td class="align-middle" style="border-color: #A1A1A1;border-bottom:1.95px solid black;">
+                            Fila 2, Celda 3
+                            <span class="botonVolver">
+                                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                                </svg>
+                            </span>
+                        </td> 
+                    </tr>
+
+                    
+                </table>
+            </div>
+            
+            <!-- Footer Buttons -->
+            <div class="col-12 px-4"> 
+                <div class="row d-flex justify-content-center column-gap-4">
+                    <div class="col-5 d-grid m-0 p-0">
+                        <button type="button" class="col btn btn-abort">Limpiar</button>
+                    </div>
+                    <div class="col-6 d-grid m-0 p-0">
+                        <button type="button" class="col btn btn-continue">Consultar</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

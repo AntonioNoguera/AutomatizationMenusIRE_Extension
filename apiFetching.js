@@ -93,7 +93,10 @@ function testingApi(){
 }
 
 function clearAll(){
-
+    var dias = document.getElementById("dServicio").value="";
+    var turnos = document.getElementById("tDia").value="";
+    var distribucion = document.getElementById("dPlatillo").value="";
+    var temp = document.getElementsByName("temp")[0].checked=true;
 }
 
 function calligAPI(){
@@ -123,18 +126,4 @@ function calligAPI(){
     console.log(postJson)
 }
 
-
 testingApi();
-/* 
-estructura del objeto de post
-Prediccion DE tiempo 1:20 primer metodo
-{
-    nameServiceDays["Lunes","Martes,Miercoles","etc"],
-    turnsOfDay["Desayuno","Comida","Cena"]
-    turnFormat{
-        main:1,
-        lasDemasHuevadas
-    }
-}
-
-*/

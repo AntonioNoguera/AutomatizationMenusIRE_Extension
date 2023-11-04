@@ -1,6 +1,7 @@
 console.log("Testings")
 
 const paleta = ["#ff6666","	#ffbd55","#ffff66","#9de24f","#87cefa","#A0C4FF","#725fe2","#FFC6FF","#FFFFFC"]
+var membersAbove =[]; 
 
 function testingApi(){
     const apiUrl = 'http://localhost:8000/Automatization';
@@ -16,7 +17,6 @@ function testingApi(){
         .then(data => {
             //Funcionando
             console.log(data)
-            var membersAbove =[]; 
             const mainTags = ["Desayuno","Comida","Cena"]
  
             //Dish Distribution 
@@ -91,6 +91,39 @@ function testingApi(){
         });
 
 }
+
+function clearAll(){
+
+}
+
+function calligAPI(){
+    var dias = document.getElementById("dServicio").value.split(/\s*,\s*/);
+    var turnos = document.getElementById("tDia").value.split(/\s*,\s*/);
+    var distribucion = document.getElementById("dPlatillo").value.split(/\s*,\s*/);
+    var temp = document.getElementsByName("temp")[0].checked;
+
+    var objectMembers=[];
+    for(i=0;i<membersAbove.length;i++){
+        var jsonObj = {};
+        jsonObj[membersAbove[i]] = distribucion[i];
+        objectMembers.push(jsonObj);
+    } 
+
+    var temp = temp? true: false;
+
+    console.log(dias," - ",turnos," - ",distribucion," - ",temp);
+
+    var postJson = {
+        nameServiceDays:dias,
+        turnsOfDay:turnos,
+        turnFormat:objectMembers,
+        booleanTemp: temp
+    }
+
+    console.log(postJson)
+}
+
+
 testingApi();
 /* 
 estructura del objeto de post

@@ -121,7 +121,7 @@
 
 
     <!-- Interfaz de Captura -->
-    <div class="container mb-4 px-5 py-4 bg-secondary-subtle" style="width: 75%;">
+    <div class="container mb-4 rounded px-5 py-4 bg-secondary-subtle" style="width: 75%;">
         <div class="row mb-4">
             <span class="text-center" style="font-size: 24px;">
                 Ingresa los valores para tu Menú
@@ -133,38 +133,65 @@
                 <div class="container">
                     <div class="row align-items-center"> 
                             <p class="form-label" style="text-align: center;">Días de Servicio: </p> 
-                            <input type="number" class="form-control" id="dServicio">
+                            <input type="text" placeholder="ej: Lunes, Martes, Jueves, Viernes " class="form-control text-center" id="dServicio">
+                            <span class="text-center" style="font-style: italic;font-size: small;">Días incluidos en el formato.</span> 
                     </div>
-                </div>
-                <div class="container mt-3">
-                    <div class="row align-items-center"> 
-                            <p class="form-label" style="text-align: center;">Número de Turnos por Día: </p> 
-                            <input type="number" class="form-control" id="dServicio">
-                    </div>
-                </div>
+                </div> 
                 
             </div>
             <div class="col-6">
                 <div class="container">
                     <div class="row align-items-center"> 
                         <p class="form-label" style="text-align: center;">Distribución de Platillos Por Turno: </p> 
-                        <input type="number" class="form-control" id="dPlatillo"> 
-                        <span class="text-center" style="font-style: italic;font-size: small;">Distribución de Platillos Por Turno: </span> 
+                        <input type="text" placeholder="ej: 0, 1, 3, 4"  class="form-control text-center" id="dPlatillo"> 
+                        <span class="text-center" style="font-style: italic;font-size: small;">Los valores pertenecen al numero del tipo de platillo.</span> 
                     </div>
                 </div>
             </div>
         </div>
- 
- 
+
+        <div class="row mt-4 align-items-center">
+            <div class="col-6">
+                <div class="container">
+                    <div class="row align-items-center"> 
+                            <p class="form-label" style="text-align: center;">Turnos por Día: </p> 
+                            <input type="text" placeholder="ej: Desayuno, Comida, Comida, Cena" class="form-control text-center" id="tDia">
+                            <span class="text-center" style="font-style: italic;font-size: small;">Debe de darse el tipo de platillo, de cada turno.</span> 
+                    </div>
+                </div> 
+                
+            </div>
+            <div class="col-6 justify-content-center">
+                <div class="container">
+                    <div class="row"> 
+                        <p class="form-label" style="text-align: center;">Permitir Temperaturas Duplicadas: </p> 
+                        <div id="tempDoble" class="justify-content-center row m-0">
+                            <div class="col-6 mx-0 d-grid">
+                                <input type="radio" class="btn btn-check btn-block" name="temp" id="tempTrue" autocomplete="off" checked>
+                                <label class="btn btn-outline-success" for="tempTrue">Soy Hipertenso</label>
+                            </div>
+
+                            <div class="col-6 mx-0 d-grid">
+                                <input type="radio" class="btn-check" name="temp" id="tempFalse" autocomplete="off">
+                                <label class="btn btn-outline-danger" for="tempFalse">No soy Hipertenso</label>
+                            </div>   
+                        </div>
+                        <span class="text-center" style="font-style: italic;font-size: small;">Habilitarán las temperaturas duplicadas.</span> 
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
 
         <!-- Footer Buttons -->
-        <div class="col-12 mt-5 px-4"> 
-            <div class="row d-flex justify-content-center column-gap-4">
+        <div class="col-12 mt-5 px-2"> 
+            <div class="row d-flex justify-content-center column-gap-3">
                 <div class="col-5 d-grid m-0 p-0">
-                    <button type="button" class="col btn btn-abort" onclick="testingApi()">Limpiar</button>
+                    <button type="button" class="col btn btn-abort" onclick="clearAll()">Limpiar</button>
                 </div>
-                <div class="col-6 d-grid m-0 p-0">
-                    <button type="button" class="col btn btn-continue">Consultar</button>
+                <div class="col-5 d-grid m-0 p-0">
+                    <button type="button" class="col btn btn-continue" onclick="calligAPI()">Consultar</button>
                 </div>
             </div>
         </div>

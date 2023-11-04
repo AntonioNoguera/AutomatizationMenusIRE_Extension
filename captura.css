@@ -95,6 +95,11 @@
     border: none !important;
 }
 
+input::placeholder {
+  font-style: italic;
+  text-align: center;
+  color:lightblue;
+}
 
 .btn-abort:hover{
     background-color: #fbafaf !important;

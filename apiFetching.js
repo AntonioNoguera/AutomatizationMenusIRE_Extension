@@ -1,5 +1,7 @@
 console.log("Testings")
 
+const paleta = ["#ff6666","	#ffbd55","#ffff66","#9de24f","#87cefa","#A0C4FF","#725fe2","#FFC6FF","#FFFFFC"]
+
 function testingApi(){
     const apiUrl = 'http://localhost:8000/Automatization';
 
@@ -14,15 +16,16 @@ function testingApi(){
         .then(data => {
             //Funcionando
             console.log(data)
-
-
-            console.log(data.dish_Distribution.length);
+            var membersAbove =[]; 
+            const mainTags = ["Desayuno","Comida","Cena"]
+ 
             //Dish Distribution 
             const contenedor = document.getElementById('typesTagBar');
-            for(i=0;i<data.dish_Distribution.length;i++){
-                console.log(data.dish_Distribution[i]);
+            for(i=0;i<data.dish_Distribution.length;i++){ 
                 var tagIte = data.dish_Distribution[i];
 
+                if(!mainTags.includes(tagIte.name)){membersAbove.push(tagIte.name)}
+                //TAGS
                 const nuevoTag = document.createElement('div');
                 nuevoTag.className = 'col';
 
@@ -30,7 +33,7 @@ function testingApi(){
                 tag.className = "color-cuadro";
 
                 //Aqui veremos como le hago pa tener un conjunto de colores
-                tag.style.backgroundColor = 'red';  
+                tag.style.backgroundColor = paleta[i];  
 
                 nuevoTag.appendChild(tag);
 
@@ -39,7 +42,26 @@ function testingApi(){
                 nuevoTag.appendChild(document.createTextNode(tagText));
 
                 contenedor.appendChild(nuevoTag);
+
+                //BARS
+                //Father
+                const navBar = document.getElementById("dishTypeBar");
+
+                const newBarH = document.createElement('div');
+                newBarH.className = 'progress';
+                newBarH.style.width = tagIte.members+"%";  
+                
+
+                //Son
+                const newBarM = document.createElement('div');
+                newBarM.className = "progress-bar progress-bar-striped progress-bar-animated";
+                newBarM.style.backgroundColor = paleta[i];
+                //Aqui veremos como le hago pa tener un conjunto de colores 
+
+                newBarH.appendChild(newBarM);
+                navBar.appendChild(newBarH);
             }
+            console.log(membersAbove);
 
             //Temperature Distribution
             const tempFrioValue = data.temperature_Distribution.find(item => item.name == "Frío").members;
@@ -53,6 +75,7 @@ function testingApi(){
             document.getElementById("tagFri").innerHTML=tempFrioValue;
             document.getElementById("tagIrr").innerHTML=temIrrelValue;
             document.getElementById("tagCal").innerHTML=tempCaliValue;
+
             //Assamble distribution 
             const assamFalseValue = data.assamble_Distribution.find(item => item.id === 0).members;
             const assamTrueValue = data.assamble_Distribution.find(item => item.id === 1).members;
@@ -70,12 +93,15 @@ function testingApi(){
 }
 testingApi();
 /* 
-estructura del objeto de return
+estructura del objeto de post
 Prediccion DE tiempo 1:20 primer metodo
 {
-    objeto{
-        [nombre,atributo]
-    } 
+    nameServiceDays["Lunes","Martes,Miercoles","etc"],
+    turnsOfDay["Desayuno","Comida","Cena"]
+    turnFormat{
+        main:1,
+        lasDemasHuevadas
+    }
 }
 
 */

@@ -23,41 +23,13 @@
 
         <!-- Barras -->
         <div class="mx-auto my-3" style="height: 30px;width: 80%;">
-            <div class="progress-stacked" style="height: 100%;">
-                <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 30%">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                        style="background-color: salmon;"></div>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 40%">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                        style="background-color: lightgreen;"></div>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 10%">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                        style="background-color: lightblue;"></div>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 10%">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                        style="background-color: yellow;"></div>
-                </div>
-                <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0"
-                    aria-valuemax="100" style="width: 10%">
-                    <div class="progress-bar progress-bar-striped progress-bar-animated"
-                        style="background-color: pink;"></div>
-                </div>
+            <div class="progress-stacked" id="dishTypeBar" style="height: 100%;"> 
             </div>
         </div>
 
         <!-- Etiquetas -->
         <div class="container  text-center mx-auto" style="width: 80%;">
-            <div class="row align-items-center" id="typesTagBar">
-                <div class="col">
-                    <span class="color-cuadro naranja"></span>30% Desayuno
-                </div> 
+            <div class="row align-items-center" id="typesTagBar"> 
             </div>
         </div>
     </div>
@@ -156,68 +128,37 @@
             </span>
         </div>
 
-        <div class="row">
+        <div class="row align-items-center">
             <div class="col-6">
                 <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-7">
-                            <p class="form-label" style="text-align: right;">Dias de Servicio: </p> 
-                        </div>
-                        <div class="col-5">
-                            <input type="number" class="form-control inputsForm" id="dServicio">
-                        </div>
+                    <div class="row align-items-center"> 
+                            <p class="form-label" style="text-align: center;">Días de Servicio: </p> 
+                            <input type="number" class="form-control" id="dServicio">
+                    </div>
+                </div>
+                <div class="container mt-3">
+                    <div class="row align-items-center"> 
+                            <p class="form-label" style="text-align: center;">Número de Turnos por Día: </p> 
+                            <input type="number" class="form-control" id="dServicio">
                     </div>
                 </div>
                 
             </div>
-        </div>
-
-        <div class="row my-3">
             <div class="col-6">
                 <div class="container">
-                    <div class="row align-items-center">
-                    <div class="col-7">
-                        <p class="form-label" style="text-align: right;">Número de Turnos por Día: </p> 
-                    </div>
-                    <div class="col-5">
-                        <input type="number" class="form-control inputsForm" id="tDia">
-                    </div>
-                </div>
-                </div>
-                
-            </div>
-            <div class="col-6 ">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-7">
-                            <p class="form-label" style="text-align: right;">Distribución de Platillos Por Turno: </p> 
-                        </div>
-                        <div class="col-5">
-                            <input type="number" class="form-control inputsForm" id="dPlatillo">
-                        </div>
+                    <div class="row align-items-center"> 
+                        <p class="form-label" style="text-align: center;">Distribución de Platillos Por Turno: </p> 
+                        <input type="number" class="form-control" id="dPlatillo"> 
+                        <span class="text-center" style="font-style: italic;font-size: small;">Distribución de Platillos Por Turno: </span> 
                     </div>
                 </div>
             </div>
         </div>
-
-        <div class="row">
-            <div class="col-5">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-10">
-                            <p class="form-label" style="text-align: right;">Permitir Temperaturas Duplicadas: </p> 
-                        </div>
-                        <div class="col-1 form-check form-switch">
-                            <input class="form-check-input" type="checkbox" role="switch" id="dobTemp"> 
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
+ 
+ 
 
         <!-- Footer Buttons -->
-        <div class="col-12 mt-4 px-4"> 
+        <div class="col-12 mt-5 px-4"> 
             <div class="row d-flex justify-content-center column-gap-4">
                 <div class="col-5 d-grid m-0 p-0">
                     <button type="button" class="col btn btn-abort" onclick="testingApi()">Limpiar</button>

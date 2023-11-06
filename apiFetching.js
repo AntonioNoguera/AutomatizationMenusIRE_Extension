@@ -1,5 +1,3 @@
-console.log("Testings")
-
 const paleta = ["#ff6666","	#ffbd55","#ffff66","#9de24f","#87cefa","#A0C4FF","#725fe2","#FFC6FF","#FFFFFC"]
 var membersAbove =[]; 
 
@@ -30,9 +28,7 @@ function testingApi(){
                 nuevoTag.className = 'col';
 
                 const tag = document.createElement('span');
-                tag.className = "color-cuadro";
-
-                //Aqui veremos como le hago pa tener un conjunto de colores
+                tag.className = "color-cuadro"; 
                 tag.style.backgroundColor = paleta[i];  
 
                 nuevoTag.appendChild(tag);
@@ -55,8 +51,7 @@ function testingApi(){
                 //Son
                 const newBarM = document.createElement('div');
                 newBarM.className = "progress-bar progress-bar-striped progress-bar-animated";
-                newBarM.style.backgroundColor = paleta[i];
-                //Aqui veremos como le hago pa tener un conjunto de colores 
+                newBarM.style.backgroundColor = paleta[i]; 
 
                 newBarH.appendChild(newBarM);
                 navBar.appendChild(newBarH);
@@ -108,7 +103,8 @@ function calligAPI(){
     var objectMembers=[];
     for(i=0;i<membersAbove.length;i++){
         var jsonObj = {};
-        jsonObj[membersAbove[i]] = distribucion[i];
+        jsonObj["name"] = membersAbove[i];
+        jsonObj["recurrence"] = distribucion[i];
         objectMembers.push(jsonObj);
     } 
 
@@ -124,6 +120,46 @@ function calligAPI(){
     }
 
     console.log(postJson)
+    post(postJson);
+}
+
+function post(data){ 
+    const url = 'http://localhost:8000/Automatization'; // Reemplaza con la URL de tu API
+
+    fetch(url, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json' // Ajusta el tipo de contenido según tus necesidades
+        },
+        body: JSON.stringify(data) // Convierte el objeto a JSON
+    })
+        .then(response => response.json()) // Si esperas una respuesta JSON
+        .then(data => {
+            console.log(data); // Maneja la respuesta aquí
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+
 }
 
 testingApi();
+
+
+/*
+var returnFormat={   
+    [
+        //Arreglo del Turno Semanal
+        weekly_turn:[
+            day:"Lunes",
+            food_time:[
+                food:"Desayuno",
+                members:[
+                    "DISH MODEL",
+                    "DISH MODEL",
+                ]
+            ]
+        ]
+    ]
+};
+*/

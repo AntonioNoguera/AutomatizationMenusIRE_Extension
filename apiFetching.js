@@ -1,5 +1,5 @@
 const paleta = ["#ff6666","	#ffbd55","#ffff66","#9de24f","#87cefa","#A0C4FF","#725fe2","#FFC6FF","#FFFFFC"]
-var membersAbove =[]; 
+var membersAbove = new Map(); 
 
 function testingApi(){
     const apiUrl = 'http://localhost:8000/Automatization';
@@ -22,7 +22,7 @@ function testingApi(){
             for(i=0;i<data.dish_Distribution.length;i++){ 
                 var tagIte = data.dish_Distribution[i];
 
-                if(!mainTags.includes(tagIte.name)){membersAbove.push(tagIte.name)}
+                if(!mainTags.includes(tagIte.name)){membersAbove.set(tagIte.id,tagIte.name)}
                 //TAGS
                 const nuevoTag = document.createElement('div');
                 nuevoTag.className = 'col';
@@ -101,12 +101,18 @@ function calligAPI(){
     var temp = document.getElementsByName("temp")[0].checked;
 
     var objectMembers=[];
-    for(i=0;i<membersAbove.length;i++){
+    
+    var i=0;
+    membersAbove.forEach((valor,clave) => {
         var jsonObj = {};
-        jsonObj["name"] = membersAbove[i];
-        jsonObj["recurrence"] = distribucion[i];
+        jsonObj["id"]=clave;
+        jsonObj["name"]=valor;
+        jsonObj["recurrence"]=distribucion[i];
         objectMembers.push(jsonObj);
-    } 
+        i++;
+    });
+
+    console.log(objectMembers);
 
     var temp = temp? true: false;
 

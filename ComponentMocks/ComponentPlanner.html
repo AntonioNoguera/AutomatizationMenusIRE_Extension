@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Verifica</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='bootstrap.min.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost&display=swap" rel="stylesheet">
+    <style>
+        *{
+            font-family: 'Jost', sans-serif;
+        }
+
+        .tbGray td,.tbGray{
+            background-color: #D9D9D9 !important;  
+        }
+
+        .tbA{
+            background-color: #B9FFFF !important;
+            border-color: #B9FFFF !important;
+        }
+
+        .tbB td,.tbB{
+            background-color: #81C9FA !important;
+            border-color: #81C9FA !important;
+        } 
+
+        .tbC td,.tbC{
+            background-color: #2196F3 !important;
+            border-color: #2196F3 !important;
+        }
+
+        .tbD td,.tbD{
+            background-color: #1465BB !important;
+            border-color: #1465BB !important;
+        }
+
+        .tbE td,.tbE{
+            background-color: #0057AD !important;
+            border-color: #0057AD !important;
+        }
+
+        .tbF td,.tbF{
+            background-color: #0057AD !important;
+            border-color: #0057AD !important;
+        }
+
+
+
+        td {
+            vertical-align: bottom;
+            text-align: center;
+            text-align: center; 
+            position:relative !important;
+        }
+
+        .dayLabel {
+            font-size: 1.5em;
+            -ms-writing-mode: tb-rl;
+            -webkit-writing-mode: vertical-rl;
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);    
+        }
+
+        .botonVolver{ 
+            transform: rotate(180deg);   
+            position: absolute;
+            fill: gray;
+            right: 2%;
+            cursor: pointer;
+            transition:transform .5s ;
+        }
+        .botonVolver:hover{ 
+            transform: rotate(360deg);   
+            fill: black;
+            right: 2%;
+        }
+        
+        .diaA{
+            background-color: #FFFFA2 !important;
+        }
+
+        .diaB{
+            background-color: #E3EC72 !important;
+        }
+
+        .diaC{
+            background-color: #BFBF00 !important;
+        }
+
+
+        .btn-continue,.btn-continue:hover:active{
+            background-color: #198754 !important;
+            color:white !important;
+            border: none !important;
+        } 
+        
+        .btn-continue:hover{
+            background-color: #a4e6c7 !important;
+            color:rgb(6, 97, 9) !important;
+        }
+
+        .btn-abort,.btn-abort:hover:active{
+            background-color: #d14545 !important;
+            color:white !important;
+            border: none !important;
+        }
+
+        .btn-abort:hover{
+            background-color: #fbafaf !important;
+            color:#4e0d0d !important;
+        }
+
+        .btnWeekR,.btnWeekL,.btnWeekL:hover:active,.btnWeekR:hover:active{
+            font-size: 2.5em;
+            background: none; 
+            border: none;
+            color: gray; 
+        }
+        .btnWeekR{  
+            right: 20%;
+            transition:right .3s;
+        } 
+
+        .btnWeekL{  
+            left: 20%;
+            transition:left .3s;
+        } 
+
+        .btnWeekR:hover{ 
+            color: black;
+            right: 15%;
+        } 
+
+        .btnWeekL:hover{ 
+            color: black;
+            left: 15%;
+        } 
+
+    </style>
+</head>
+<body>
+<!-- Table -->
+<div class="col-12 text-center justify-content-center d-flex">
+    <table class="table table-bordered" style="border-color: #A1A1A1;">
+    <!--Headers-->
+    <tr style="border-width: 0px;"> 
+        <!-- Esto de aquí se consigue con get(PrimerDía).foodTime.size() -->
+        <th colspan="1" style="width: 20px; border-width: 0px;">&nbsp</th>
+        <th colspan="1" class="diaA" style="border-width: 0px;">Desayuno</th>
+        <th colspan="1" class="diaB" style="border-width: 0px;">Comida</th>
+        <th colspan="1" class="diaC" style="border-width: 0px;">Cena</th>
+    </tr>
+    
+    <!-- Componente del Var Superior -->
+    <!-- Componente de Día -->
+    
+    <!-- Lunes -->
+    <!-- Desde aquí comienza el for de los elementos de cada turno de comida-->
+
+    <tr style="border-width: 0px;">
+        <!--Date Tag-->
+
+        <!-- IF de primera iteración solo se agrega la nota en base a este-->
+        <!-- El rowSpan, irá en respuesta al get(PrimerDía).foodTime.size() aka #de elementos en el turno -->
+        <td rowspan="2" class="align-middle tbA dayLabel" style="border-color: #B9FFFF;">
+            <span class="mx-auto" >Lunes</span>
+        </th> 
+        <!--For Turn Types-->
+        
+        <!-- De aqui arranca un For que recorre el número de elementos en el turno del platillo -->
+        <!-- Dejar en claro que se manda o solamente los arreglos, o todo el objeto, y que el componente  -->
+        <!-- Se hace la LÍNEA DEL TIEMPO -->
+        <!--Row Members-->
+        <td class="tbGray align-middle">
+            Fila 1, Celda 2
+            <span class="botonVolver">
+            <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+            </svg>
+        </span>
+        </td>
+        <td class="tbGray align-middle"> 
+            Fila 1, Celda 3
+            <span class="botonVolver">
+                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                </svg>
+        </td>
+        <td class="tbGray align-middle">
+            Fila 1, Celda 4
+            <span class="botonVolver">
+                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                </svg>
+        </td> 
+    </tr>
+    <tr>
+        <!--Row Members-->
+        <td class="align-middle">
+            Fila 2, Celda 1
+            <span class="botonVolver">
+                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                </svg>
+        </td>
+        <td class="align-middle">
+            Fila 2, Celda 2
+            <span class="botonVolver">
+                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                </svg>
+        </td>
+        <td class="align-middle">
+            Fila 2, Celda 3
+            <span class="botonVolver">
+                <svg height="24" viewBox="0 -960 960 960" width="24" class="custom-span">
+                    <path d="M480-160q-134 0-227-93t-93-227q0-134 93-227t227-93q69 0 132 28.5T720-690v-110h80v280H520v-80h168q-32-56-87.5-88T480-720q-100 0-170 70t-70 170q0 100 70 170t170 70q77 0 139-44t87-116h84q-28 106-114 173t-196 67Z"/>
+                </svg>
+        </td> 
+    </tr> 
+    </table>
+</div></body></html>

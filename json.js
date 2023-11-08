@@ -8,74 +8,12 @@
                     {
                         "id": 1,
                         "food": "Postre",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     },
                     {
                         "id": 1,
                         "food": "Guranición",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     }
                 ],
                 "turn": "Desayuno"
@@ -85,74 +23,12 @@
                     {
                         "id": 1,
                         "food": "Postre",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     },
                     {
                         "id": 1,
                         "food": "Guranición",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     }
                 ],
                 "turn": "Comida"
@@ -168,74 +44,12 @@
                     {
                         "id": 1,
                         "food": "Postre",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     },
                     {
                         "id": 1,
                         "food": "Guranición",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     }
                 ],
                 "turn": "Desayuno"
@@ -245,78 +59,44 @@
                     {
                         "id": 1,
                         "food": "Postre",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     },
                     {
                         "id": 1,
                         "food": "Guranición",
-                        "members": [
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            },
-                            {
-                                "name": "Tacos e",
-                                "assamble": true,
-                                "temperature": "Caliente",
-                                "complement_id": 7,
-                                "sauce_id": 8,
-                                "protein_id": 9,
-                                "type_id": 5,
-                                "id": 2,
-                                "last_made": "2023-11-05 16:00:34",
-                                "services": 0,
-                                "rating": 0,
-                                "image_path": "IRE_Project\\src\\main\\esources\\images\\default.png",
-                                "active": true
-                            }
-                        ]
+                        "members": [ ]
                     }
                 ],
                 "turn": "Comida"
             }
         ]
     }
-]
+];
+
+
+//Response
+var data={
+    "nameServiceDays": ["Lunes","Martes","Miercoles"],
+    "turnsOfDay": [
+        "Desayuno",
+        "Comida"
+    ],
+    "turnFormat": [
+        {
+            "id": 4,
+            "name": "Postre",
+            "recurrence": "0"
+        },
+        {
+            "id": 5,
+            "name": "Testing",
+            "recurrence": "2"
+        },
+        {
+            "id": 6,
+            "name": "Guarnición B",
+            "recurrence": "1"
+        }
+    ],
+    "booleanTemp": true
+};

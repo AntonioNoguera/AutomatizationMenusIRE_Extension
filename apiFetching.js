@@ -16,7 +16,7 @@ function testingApi(){
             //Funcionando
             console.log(data)
             const mainTags = ["Desayuno","Comida","Cena"]
- 
+            
             //Dish Distribution 
             const contenedor = document.getElementById('typesTagBar');
             for(i=0;i<data.dish_Distribution.length;i++){ 

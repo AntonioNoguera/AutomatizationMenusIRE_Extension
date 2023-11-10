@@ -1,9 +1,9 @@
-const paleta = ["#ff6666","	#ffbd55","#ffff66","#9de24f","#87cefa","#A0C4FF","#725fe2","#FFC6FF","#FFFFFC"]
+const paleta = ["#ff6666","	#ffbd55","#EDE532","#9de24f","#87cefa","#A0C4FF","#725fe2","#FFC6FF","#FFFFFC"]
 var membersAbove = new Map(); 
 
 function testingApi(){
     const apiUrl = 'http://localhost:8000/Automatization';
-
+    
     fetch(apiUrl)
         .then(response => {
         if (response.status === 200) {
@@ -62,7 +62,7 @@ function testingApi(){
             const tempFrioValue = data.temperature_Distribution.find(item => item.name == "Frío").members;
             const tempCaliValue = data.temperature_Distribution.find(item => item.name === "Caliente").members;
             const temIrrelValue = data.temperature_Distribution.find(item => item.name === "Irrelevante").members;
- 
+
             document.getElementById("progBarTempFri").style.width=tempFrioValue+"%";
             document.getElementById("progBarTempIrr").style.width=temIrrelValue+"%";
             document.getElementById("progBarTempCal").style.width=tempCaliValue+"%";
@@ -82,16 +82,16 @@ function testingApi(){
             document.getElementById("tagAssamFalse").innerHTML=assamFalseValue;
         })
         .catch(error => {
-            console.error(error);
+            console.log("TESTING ERROR");
         });
 
 }
 
 function clearAll(){
-    var dias = document.getElementById("dServicio").value="";
-    var turnos = document.getElementById("tDia").value="";
-    var distribucion = document.getElementById("dPlatillo").value="";
-    var temp = document.getElementsByName("temp")[0].checked=true;
+    document.getElementById("dServicio").value="";
+    document.getElementById("tDia").value="";
+    document.getElementById("dPlatillo").value="";
+    document.getElementsByName("temp")[0].checked=true;
 }
 
 function calligAPI(){
@@ -125,7 +125,7 @@ function calligAPI(){
         booleanTemp: temp
     }
 
-    console.log(postJson)
+    console.log("dataOUT",postJson)
     post(postJson);
 }
 
@@ -141,31 +141,13 @@ function post(data){
     })
         .then(response => response.json()) // Si esperas una respuesta JSON
         .then(data => {
-            console.log(data); // Maneja la respuesta aquí
+
+            console.log("dataOUT",data); // Maneja la respuesta aquí
         })
         .catch(error => {
             console.error('Error:', error);
         });
 
-}
+} 
 
 testingApi();
-
-
-/*
-var returnFormat={   
-    [
-        //Arreglo del Turno Semanal
-        weekly_turn:[
-            day:"Lunes",
-            food_time:[
-                food:"Desayuno",
-                members:[
-                    "DISH MODEL",
-                    "DISH MODEL",
-                ]
-            ]
-        ]
-    ]
-};
-*/
